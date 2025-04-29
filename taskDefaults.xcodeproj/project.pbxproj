@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8FFA91742DC15FDB00A3BECD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8FFA91732DC15FDB00A3BECD /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8F13DB992DBFBF8E00A19778 /* taskDefaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskDefaults.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFA91742DC15FDB00A3BECD /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = taskDefaults;
 			packageProductDependencies = (
+				8FFA91732DC15FDB00A3BECD /* Lottie */,
 			);
 			productName = taskDefaults;
 			productReference = 8F13DB992DBFBF8E00A19778 /* taskDefaults.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 8F13DB902DBFBF8E00A19778;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8FFA91722DC15FDB00A3BECD /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F13DB9A2DBFBF8E00A19778 /* Products */;
 			projectDirPath = "";
@@ -333,6 +342,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FFA91722DC15FDB00A3BECD /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FFA91732DC15FDB00A3BECD /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FFA91722DC15FDB00A3BECD /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F13DB912DBFBF8E00A19778 /* Project object */;
 }
