@@ -82,6 +82,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
         button.addTarget(self, action: #selector(addTask), for: .touchUpInside)
         tableView.dataSource = self
         tableView.delegate = self
@@ -124,6 +126,20 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let itemToMove = tasks.remove(at: fromIndexPath.row)
+        tasks.insert(itemToMove, at: to.row)
+        saveTasks()
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.setEditing(editing, animated: animated)
+    }
     
 }
 
